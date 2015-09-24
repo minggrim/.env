@@ -1,0 +1,1 @@
+colorscheme darkblack.vim

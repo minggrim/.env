@@ -1,1 +1,2 @@
-colorscheme darkblack.vim
+:set hlsearch
+:set statusline+=%F

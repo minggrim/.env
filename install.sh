@@ -23,6 +23,7 @@ then
 	$COPY_TOOL -av --delete ssh/config ~/.ssh
 	$COPY_TOOL -av --delete bin ~
 	$COPY_TOOL -av --delete util_scripts ~
+	$COPY_TOOL -av --delete vim/colors ~/.vim
 else
 	$COPY_TOOL vim/.vim ~
 	$COPY_TOOL vim/.vimrc ~
@@ -32,6 +33,8 @@ else
 	$COPY_TOOL ssh/config ~/.ssh
 	$COPY_TOOL bin ~
 	$COPY_TOOL util_scripts ~
+	$COPY_TOOL vim/colors ~/.vim
+	
 fi
 
 
@@ -84,7 +87,8 @@ if [ "$ifcts" = "yes" -o "$ifcts" = "YES" ]; then
 	rm -rf vim74
 	tar jxf vim-7.4.tar.bz2
 	cd vim74
-	./configure --prefix=$HOME/bin/vim --enable-cscope && make && make install
+	make distclean
+	./configure --prefix=$HOME/bin/vim --with-features=huge --enable-cscope && make && make install
 	if [ $? -eq 0 ]; then
 		echo "compile and install vim successfully in $HOME/bin/vim"
 		vim="true"

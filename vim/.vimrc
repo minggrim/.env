@@ -22,5 +22,5 @@ map <MouseMiddle> <esc>"*p
 
 set t_Co=256
 syntax on
-colorscheme advantage
-
+set backspace=indent,eol,start
+colorscheme adrian

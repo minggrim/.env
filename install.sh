@@ -71,7 +71,26 @@ if [ "$ifcts" = "yes" -o "$ifcts" = "YES" ]; then
 		cd ..
 	fi
 	
+	rm -rf vim74
+
+	tar xzf vim-7.4.tar.bz2
+	cd vim74
+	./configure --prefix=$HOME/bin/vim --enable-cscope
+	make && make install
+	if [ $? -eq 0 ]; then
+		echo "compile and install vim successfully in $HOME/bin/vim";
+		cd ..
+		rm -rf cscope-15.8b
+	else
+		echo "fail to install vim from source"	
+		cd ..
+	fi
+	
+	rm -rf vim74
+
 fi
+cd ..
+export PATH=$HOME/bin/ctags/bin:$HOME/bin/cscope/bin:$HOME/bin/vim/bin:$PATH
+
 echo $ifcts
 echo $HOME
-exec bash

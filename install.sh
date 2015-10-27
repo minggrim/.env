@@ -60,7 +60,7 @@ if [ "$ifcts" = "yes" -o "$ifcts" = "YES" ]; then
 	rm -rf cscope-15.8b
 	tar xzf cscope-15.8b.tar.gz
 	cd cscope-15.8b
-	./configure --prefix=$HOME/bin/cscope
+	./configure --prefix=$HOME/bin/cscope --with-features=huge
 	make && make install
 	if [ $? -eq 0 ]; then
 		echo "compile and install cscope successfully in $HOME/bin/cscope";

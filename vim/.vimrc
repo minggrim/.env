@@ -19,3 +19,8 @@ set mouse=nv
 " this makes the mouse paste a block of text without formatting it
 " (good for code)
 map <MouseMiddle> <esc>"*p
+
+set t_Co=256
+syntax on
+colorscheme advantage
+

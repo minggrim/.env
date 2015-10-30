@@ -1,0 +1,21 @@
+#!/usr/bin/env python
+
+import sys
+import re
+
+if __name__ == "__main__":
+    if len(sys.argv) != 3 :
+        print 'need two arguments'
+	exit(2)
+
+    regex = sys.argv[1]
+    string = sys.argv[2]
+    result = re.findall( regex , string)
+    if result is None:
+	print 'none of match'
+        sys.exit(1)
+    else:
+	print '= match result ='      
+	for match in result:
+           print match 
+        sys.exit(0)

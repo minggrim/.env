@@ -20,6 +20,7 @@ then
 	$COPY_TOOL -av --delete .tmux.conf ~
 	$COPY_TOOL -av --delete bash/.bashrc ~
 	$COPY_TOOL -av --delete bash/.bash_profile ~
+	$COPY_TOOL -av --delete bash/.inputrc ~
 	$COPY_TOOL -av --delete ssh/config ~/.ssh
 	$COPY_TOOL -av --delete bin ~
 	$COPY_TOOL -av --delete util_scripts ~
@@ -30,6 +31,7 @@ else
 	$COPY_TOOL .tmux.conf ~
 	$COPY_TOOL bash/.bashrc ~
 	$COPY_TOOL bash/.bash_profile ~
+	$COPY_TOOL bash/.inputrc ~
 	$COPY_TOOL ssh/config ~/.ssh
 	$COPY_TOOL bin ~
 	$COPY_TOOL util_scripts ~

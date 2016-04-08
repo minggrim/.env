@@ -1,0 +1,15 @@
+#!/bin/bash
+tmux new-session -d -s working
+if [ $? -eq 0 ];then
+	tmux new-window -t working:1 -n devnas 'ssh minggrim@10.77.150.1'
+	tmux new-window -t working:2 -n devas2 'ssh minggrim@10.77.150.2'
+	tmux new-window -t working:3 -n local
+	tmux new-window -t working:4 -n build 'ssh root@10.77.151.101'
+	tmux new-window -t working:5 -n site3 'ssh admin@10.77.157.9'
+	tmux new-window -t working:6 -n site4 'ssh admin@10.77.157.10'
+	tmux new-window -t working:7 -n site5
+	tmux select-window -t working:1
+	tmux attach-session -t working
+else
+	tmux a -dt working
+fi

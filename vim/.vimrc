@@ -23,4 +23,6 @@ map <MouseMiddle> <esc>"*p
 set t_Co=256
 syntax on
 set backspace=indent,eol,start
+set expandtab ts=4 sw=4 ai
+
 colorscheme adrian

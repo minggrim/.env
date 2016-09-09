@@ -23,6 +23,13 @@ map i <Up>
 map k <Down>
 map a <Insert>
 map j <Left>
+map <S-i> <PAGEUP>
+map <S-k> <PAGEDOWN>
+map t <C-w>
+map ti <C-w><Up>
+map tk <C-w><Down>
+map tj <C-w><Left>
+map tl <C-w><Right>
 
 set t_Co=256
 syntax on

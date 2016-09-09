@@ -22,8 +22,8 @@ set mouse=nv
 map <MouseMiddle> <esc>"*p
 map i <Up>
 map k <Down>
-map a <Insert>
 map j <Left>
+map m <Insert>
 map <S-i> <PAGEUP>
 map <S-k> <PAGEDOWN>
 map t <C-w>

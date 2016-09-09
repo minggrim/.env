@@ -1,8 +1,9 @@
 "it's LiamLiao vimrc
 filetype on
 filetype plugin on
-map <F2> <Esc> : NERDTreeToggle<CR>
-map <F3> <Esc> : TlistToggle<CR>
+nmap <F2> : NERDTreeToggle<CR>
+nmap <F3> : TlistToggle<CR>
+let Tlist_Use_Right_Window = 1
 map <F4> : set nu!<BAR>set nonu?<CR>
 nmap <F8> :TrinityToggleAll<CR>
 
@@ -30,6 +31,7 @@ map ti <C-w><Up>
 map tk <C-w><Down>
 map tj <C-w><Left>
 map tl <C-w><Right>
+map , <Delete><Left> 
 
 set t_Co=256
 syntax on

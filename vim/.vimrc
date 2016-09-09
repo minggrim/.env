@@ -1,15 +1,15 @@
 "it's LiamLiao vimrc
 filetype on
 filetype plugin on
-nmap <F2> : NERDTreeToggle<CR>
-nmap <F3> : TlistToggle<CR>
-let Tlist_Use_Right_Window = 1
-map <F4> : set nu!<BAR>set nonu?<CR>
 nmap <F8> :TrinityToggleAll<CR>
+nmap <F2> :TrinityToggleTagList<CR> 
+nmap <F3> :TrinityToggleNERDTree<CR> 
+nmap <F4> :TrinityToggleSourceExplorer<CR> 
 
 " switch between big5 & utf8
 map <F5> :set tenc=big5<cr>
 map <F6> :set tenc=utf-8<cr>
+map <F7> : set nu!<BAR>set nonu?<CR>
 
 " highlight search result
 set hlsearch

@@ -40,6 +40,7 @@ then
     sudo pip install --upgrade virtualenv 
     sudo apt-get install -y -q vim
     sudo apt-get install -y -q git
+    sudo apt-get install -y -q tig
     sudo apt-get install -y -q exuberant-ctags
     sudo apt-get install -y -q cscope
 else

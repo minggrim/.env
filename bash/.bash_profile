@@ -5,7 +5,7 @@ alias ll="ls -GHalh"
 LS_COLORS='di=93:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35:*.rpm=90'
 export LS_COLORS
 
-PATH=/home/minggrim/bin/vim/bin:/home/minggrim/bin/ctags/bin:/home/minggrim/bin/cscope/bin:/home/minggrim/util_scripts:$PATH
+PATH=~/bin:~/util_script:$PATH
 #COLORS-Lscolors
 #From: Bartman
 #http://linux-sxs.org/housekeeping/lscolors.html

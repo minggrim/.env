@@ -15,12 +15,8 @@ fi
 echo "using $COPY_TOOL to copy files"
 if [ "$RSYNC" = "Y" ]
 then
-	$COPY_TOOL -av --delete bin ~
-	$COPY_TOOL -av --delete util_scripts ~
 	$COPY_TOOL -av --delete vim/colors ~/.vim
 else
-	$COPY_TOOL bin ~
-	$COPY_TOOL util_scripts ~
 	$COPY_TOOL vim/colors ~/.vim
 fi
 
@@ -30,6 +26,8 @@ ln -sf `pwd`/bash/.bashrc ~/.bashrc
 ln -sf `pwd`/bash/.bash_profile ~/.bash_profile
 ln -sf `pwd`/bash/.inputrc ~/.inputrc
 ln -sf `pwd`/ssh/config ~/.ssh
+ln -sf `pwd`/bin ~/bin
+ln -sf `pwd`/util_scripts ~/util_scripts
 
 uname -a | grep -i "ubuntu" > /dev/null
 if [ $? -eq 0 ]

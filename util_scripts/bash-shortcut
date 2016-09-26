@@ -1,0 +1,8 @@
+#!/bin/bash
+echo "C-a Move to the start of the current line."
+echo "C-e Move to the end of the line."
+echo "C-f Move forward a character."
+echo "C-b Move back a character."
+echo "M-f Move forward to the end of the next word. Words are composed of letters and digits."
+echo "M-b Move back to the start of the current or previous word. Words are composed of letters and digits."
+echo "C-l Clear the screen and redraw the current line, leaving the current line at the top of the screen."

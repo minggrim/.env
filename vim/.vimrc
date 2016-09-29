@@ -16,16 +16,18 @@ Plugin 'wolfpython/cscope_map.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+"nerdtree settings
+let g:NERDTreeMapOpenSplit = 'a'
+
 "syntastic settings
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_python_checker_args='flake8'
+let g:syntastic_python_checkers='flake8'
 
 "key mappings
 nmap <F8> :TrinityToggleAll<CR>

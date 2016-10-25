@@ -21,12 +21,16 @@ else
 fi
 
 ln -sf `pwd`/vim/.vimrc ~/.vimrc
+rm -rf ~/.vim
+ln -sf `pwd`/vim/.vim ~/.vim
 ln -sf `pwd`/tmux/.tmux.conf ~/.tmux.conf
 ln -sf `pwd`/bash/.bashrc ~/.bashrc
 ln -sf `pwd`/bash/.bash_profile ~/.bash_profile
 ln -sf `pwd`/bash/.inputrc ~/.inputrc
 ln -sf `pwd`/ssh/config ~/.ssh
+rm -rf ~/bin
 ln -sf `pwd`/bin ~/bin
+rm -rf ~/util_scripts
 ln -sf `pwd`/util_scripts ~/util_scripts
 
 uname -a | grep -i "ubuntu" > /dev/null

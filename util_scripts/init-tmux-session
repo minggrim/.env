@@ -1,0 +1,7 @@
+#!/bin/sh
+
+tmux new-session -d -s photon
+tmux new-session -d -s zmq
+tmux new-session -d -s server-admin
+tmux new-session -d -s gitlab-api
+tmux list-sessions

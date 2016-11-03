@@ -2,6 +2,7 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+"vundle plugin management
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -13,7 +14,14 @@ Plugin 'SrcExpl'
 Plugin 'wesleyche/Trinity'
 Plugin 'wolfpython/cscope_map.vim'
 
+
 call vundle#end()            " required
+
+"plug plugin management
+call plug#begin()
+Plug 'Shougo/unite.vim'
+Plug 'devjoe/vim-codequery'
+call plug#end()
 filetype plugin indent on    " required
 
 "nerdtree settings
@@ -21,7 +29,7 @@ let g:NERDTreeMapOpenSplit = 'a'
 
 "syntastic settings
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_python_checkers=['flake8', 'frosted', 'pep8', 'pylint']
@@ -32,7 +40,21 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
+"let b:syntastic_mode = "passive"
+"noremap <C-w>f :SyntasticToggleMode<CR>
+noremap <C-w>c :SyntasticCheck<CR>
+noremap <C-w>o :lopen<CR>
+noremap <C-w>e :lclose<CR>
 
+"##########codequery
+let g:codequery_trigger_build_db_when_db_not_found = 1
+nnoremap <space>c :CodeQueryMenu Unite Full<CR>
+nnoremap <space>; :CodeQueryMenu Unite Magic<CR>
+"enable typing (to search menu items) by default
+nnoremap <space>\ :CodeQueryMenu Unite Magic<CR>A
+nnoremap <space><CR> :CodeQuery Symbol<CR>
+" Chain commands to find possible tests (for python)
+nnoremap <space>t :CodeQuery Caller<CR>:CodeQueryFilter test_<CR>
 
 "key mappings
 nmap <F8> :TrinityToggleAll<CR>

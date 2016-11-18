@@ -1,0 +1,22 @@
+#!/bin/bash
+DISTRIBUTION="ubuntu"
+while getopts ":d:" opt; do
+    case $opt in
+        d)
+            DISTRIBUTION=$OPTARG
+            ;;
+        h)
+            echo -e "./install [-[f|u|c|h]]\n-f: install without ask\n-u: update-rc\n-c: clean supervisord's configuration\n-h: help"
+            echo -e "Installation will go through (1)install supervisord config (2)install process config (3)rc (4)update-rc.d"
+            exit 0
+    esac
+done
+
+shift $((OPTIND-1))
+COMMAND=$1
+SUBCOMMAND=$2
+if [ "$DISTRIBUTION" == "ubuntu" ]; then
+    
+elif [ "$DISTRIBUTION" == "centos" ]; then
+    
+fi

@@ -71,6 +71,7 @@ make
 sudo make install
 
 vim +PluginInstall +qall
+vim +PlugInstall +qall
 ############################
 #  install python packages #
 ############################

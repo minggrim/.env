@@ -1,0 +1,10 @@
+[user]
+	name = liam.liao
+	mail = liam.liao@latticeworkinc.com
+	email = liam.liao@latticeworkinc.com
+[http]
+	sslVerify = false
+[core]
+	editor = vim
+[merge]
+	tool = vimdiff

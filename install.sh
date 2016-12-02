@@ -27,7 +27,8 @@ ln -sf `pwd`/tmux/.tmux.conf ~/.tmux.conf
 ln -sf `pwd`/bash/.bashrc ~/.bashrc
 ln -sf `pwd`/bash/.bash_profile ~/.bash_profile
 ln -sf `pwd`/bash/.inputrc ~/.inputrc
-ln -sf `pwd`/ssh/config ~/.ssh
+ln -sf `pwd`/ssh ~/.ssh
+ln -sf `pwd`/git/.gitconfig ~/.gitconfig
 rm -rf ~/bin
 ln -sf `pwd`/bin ~/bin
 rm -rf ~/util_scripts

@@ -21,6 +21,7 @@ call vundle#end()            " required
 call plug#begin()
 Plug 'Shougo/unite.vim'
 Plug 'devjoe/vim-codequery'
+Plug 'kien/ctrlp.vim'
 call plug#end()
 filetype plugin indent on    " required
 
@@ -32,8 +33,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
-let g:syntastic_python_checkers=['flake8', 'frosted', 'pep8', 'pylint']
-let g:syntastic_python_checkers = ['prospector']
+"let g:syntastic_python_checkers=['flake8', 'frosted', 'pep8', 'pylint']
+let g:syntastic_python_checkers=['flake8', 'frosted', 'pep8']
+"let g:syntastic_python_checkers = ['prospector']
 let g:syntastic_python_python_use_codec = 1
 set statusline+=%*
 set statusline+=%#warningmsg#
@@ -76,15 +78,15 @@ set mouse=nv
 " this makes the mouse paste a block of text without formatting it
 " (good for code)
 map <MouseMiddle> <esc>"*p
-map i <Up>
-map k <Down>
-map j <Left>
-map <S-i> <PAGEUP>
-map <S-k> <PAGEDOWN>
+"map i <Up>
+"map k <Down>
+"map j <Left>
+map <S-k> <PAGEUP>
+map <S-j> <PAGEDOWN>
 map t <C-w>
-map ti <C-w><Up>
-map tk <C-w><Down>
-map tj <C-w><Left>
+map tk <C-w><Up>
+map tj <C-w><Down>
+map th <C-w><Left>
 map tl <C-w><Right>
 map , <Delete><Left> 
 map ; <Insert>

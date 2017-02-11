@@ -14,7 +14,6 @@ Plugin 'SrcExpl'
 Plugin 'wesleyche/Trinity'
 Plugin 'wolfpython/cscope_map.vim'
 
-
 call vundle#end()            " required
 
 "plug plugin management
@@ -22,6 +21,8 @@ call plug#begin()
 Plug 'Shougo/unite.vim'
 Plug 'devjoe/vim-codequery'
 Plug 'kien/ctrlp.vim'
+Plug 'tpope/vim-dispatch'
+Plug 'mileszs/ack.vim'
 call plug#end()
 filetype plugin indent on    " required
 
@@ -75,6 +76,12 @@ set statusline+=%Fi
 set cursorline
 set mouse=nv
 
+" provide hjkl movements in Insert mode via the <Alt> modifier key
+inoremap <A-h> <C-o>h
+inoremap <A-j> <C-o>j
+inoremap <A-k> <C-o>k
+inoremap <A-l> <C-o>l
+
 " this makes the mouse paste a block of text without formatting it
 " (good for code)
 map <MouseMiddle> <esc>"*p
@@ -94,5 +101,7 @@ set t_Co=256
 syntax on
 set backspace=indent,eol,start
 set expandtab ts=4 sw=4 ai
-
+set clipboard=unnamedplus
+"
+"color scheme
 colorscheme wombat256mod

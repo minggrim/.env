@@ -13,7 +13,7 @@ Plugin 'taglist.vim'
 Plugin 'SrcExpl'
 Plugin 'wesleyche/Trinity'
 Plugin 'wolfpython/cscope_map.vim'
-
+Plugin 'Valloric/YouCompleteMe'
 call vundle#end()            " required
 
 "plug plugin management
@@ -70,6 +70,8 @@ map <F5> :set tenc=big5<cr>
 map <F6> :set tenc=utf-8<cr>
 map <F7> : set nu!<BAR>set nonu?<CR>
 
+" show colume number
+set statusline+=col:\ %c,
 " highlight search result
 set hlsearch
 set statusline+=%Fi

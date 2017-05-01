@@ -73,6 +73,8 @@ sudo make install
 
 vim +PluginInstall +qall
 vim +PlugInstall +qall
+cd ~/.vim/bundle/YouCompleteMe
+./install.sh --clang-completer
 ############################
 #  install python packages #
 ############################

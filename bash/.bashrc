@@ -4,3 +4,6 @@ alias ll="ls -GFalh"
 LS_COLORS='di=93:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35:*.rpm=90'
 export LS_COLORS
 PATH=~/bin:~/util_scripts:$PATH
+export PATH
+LD_LIBRARY_PATH=~/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH

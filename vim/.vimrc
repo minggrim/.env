@@ -74,7 +74,7 @@ map <F7> : set nu!<BAR>set nonu?<CR>
 set statusline+=col:\ %c,
 " highlight search result
 set hlsearch
-set statusline+=%Fi
+set statusline+=%F
 set cursorline
 set mouse=nv
 

@@ -45,6 +45,8 @@ then
     sudo apt-get install -y -q vim
     sudo apt-get install -y -q git
     sudo apt-get install -y -q tig
+    sudo apt-get install -y -q tmux
+    sudo apt-get install -y -q curl
     sudo apt-get install -y -q exuberant-ctags
     sudo apt-get install -y -q cscope
     sudo apt-get install -y -q cmake

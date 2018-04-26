@@ -7,7 +7,7 @@
 [core]
 	editor = vim
 [merge]
-	tool = vimdiff
+	tool = bc
 [alias]
     co = checkout
     ci = commit
@@ -18,3 +18,13 @@
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 [push]
 	default = simple
+[diff]
+	tool = bcompare
+[difftool]
+	prompt = false
+[merge "tool"]
+	bc = trustExitCode
+[diff "tool"]
+	bc = trustExitCode
+[difftool "bc3"]
+	trustExitCode = true

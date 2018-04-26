@@ -1,0 +1,8 @@
+#!/bin/bash
+if [[ ! -z $1 ]]; then
+    docker run --privileged=true -v $(pwd):/sources -w /sources -it --rm $1 /bin/bash
+else
+    echo "Usage : dockerhere <image_name>"
+    echo "Available Docker Images : "
+    docker images
+fi

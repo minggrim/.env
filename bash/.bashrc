@@ -7,3 +7,6 @@ PATH=~/bin:~/util_scripts:$PATH
 export PATH
 LD_LIBRARY_PATH=~/lib:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH
+
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8

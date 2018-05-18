@@ -1,0 +1,8 @@
+#!/bin/bash
+if [[ ! -z $1 ]]; then
+    docker exec -it $1 /bin/bash
+else
+    echo "Usage : dockerin <container_name>"
+    echo "Available Docker Containers : "
+    docker ps -a
+fi

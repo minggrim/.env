@@ -1,6 +1,10 @@
 #!/bin/bash
 if [[ ! -z $1 ]]; then
-    docker run --privileged=true -v $(pwd):/sources -w /sources -it --rm $1 /bin/bash
+    if [[ ! -z $2 ]]; then
+        docker run --name $2 --privileged=true -v $(pwd):/sources -w /sources -it --rm $1 /bin/bash
+    else
+        docker run --privileged=true -v $(pwd):/sources -w /sources -it --rm $1 /bin/bash
+    fi
 else
     echo "Usage : dockerhere <image_name>"
     echo "Available Docker Images : "

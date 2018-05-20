@@ -55,6 +55,7 @@ then
     sudo apt-get install -y -q libsqlite3-dev
     sudo apt-get install -y -q qt4-dev-tools
     sudo apt-get install -y -q libqscintilla2-dev
+    sudo apt-get install -y -q inotify-tools
 else
     echo "other linux distrubution"
 fi

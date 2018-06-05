@@ -10,3 +10,5 @@ export LD_LIBRARY_PATH
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+# PS1="\e[0;33m\u\e[0m@\h\e[0;33m\$(pwd)\e[0m:\$(date +%k:%M:%S) $ "
+PS1='\e[0;33m\u\e[0m@\h:\e[0;34m\w\e[0m[$(date +%k:%M:%S)]\$ '

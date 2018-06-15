@@ -1,0 +1,6 @@
+#!/bin/bash
+if [[ ! -z $1 ]]; then
+    mknod -m 0660 /dev/$1 b 7 8
+else
+    echo "Usage : mkloop <loop_name>"
+fi

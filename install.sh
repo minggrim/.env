@@ -90,10 +90,10 @@ sudo pip install flake8
 #  install gcin-chewing reference :
 #  https://github.com/samwhelp/play-ubuntu-18.04-plan
 ############################
-sudo apt-get install fcitx-chewing
+sudo apt-get install -y -q fcitx-chewing
 im-config -n fcitx
 mkdir -p $HOME/.config/fcitx
-ln -s ./fcitx/set/profile $HOME/.config/fcitx/profile
+ln -sf ./fcitx/set/profile $HOME/.config/fcitx/profile
 
 cd ~
 

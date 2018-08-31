@@ -13,7 +13,7 @@
     cm = commit
     di = diff
     st = status
-    br = branch
+    br = branch --sort=committerdate
     re = remote
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 [push]

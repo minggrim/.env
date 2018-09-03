@@ -10,6 +10,7 @@
 	tool = bc
 [alias]
     co = checkout
+    cp = cherry-pick
     cm = commit
     di = diff
     st = status

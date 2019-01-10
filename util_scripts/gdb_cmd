@@ -1,0 +1,11 @@
+#!/bin/bash
+
+print_cmd() {
+    echo "PURPOSE : $1"
+    echo "CMD : $2"
+    echo "==========================================="
+}
+
+print_cmd "set source directory" "dir </source/directory/>"
+print_cmd "search functions" "info func <rexep>"
+print_cmd "lock thread exection(no switch thread)" "set scheduler-locking [off|step]"

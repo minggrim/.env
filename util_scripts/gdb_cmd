@@ -9,3 +9,4 @@ print_cmd() {
 print_cmd "set source directory" "dir </source/directory/>"
 print_cmd "search functions" "info func <rexep>"
 print_cmd "lock thread exection(no switch thread)" "set scheduler-locking [off|step]"
+print_cmd "handle <sig_no|all> <nostop|stop|print|pass|nopass>" "what gdb do when process receive signals"

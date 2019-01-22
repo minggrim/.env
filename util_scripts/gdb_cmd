@@ -9,4 +9,6 @@ print_cmd() {
 print_cmd "set source directory" "dir </source/directory/>"
 print_cmd "search functions" "info func <rexep>"
 print_cmd "lock thread exection(no switch thread)" "set scheduler-locking [off|step]"
+print_cmd "ptype <symbol> " "print symbol prototype"
 print_cmd "handle <sig_no|all> <nostop|stop|print|pass|nopass>" "what gdb do when process receive signals"
+print_cmd "handle <sig_no> stop print noignore; continue; p \$_siginfo._sifields._kill.si_pid" "find signal source pid"

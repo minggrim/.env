@@ -56,6 +56,7 @@ then
     sudo apt-get install -y -q qt4-dev-tools
     sudo apt-get install -y -q libqscintilla2-dev
     sudo apt-get install -y -q inotify-tools
+    sudo apt-get isntall -y -q xclip
 else
     echo "other linux distrubution"
 fi

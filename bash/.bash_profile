@@ -1,5 +1,7 @@
 alias ls="ls -GF"
 alias ll="ls -GHalh"
+alias setclip="xclip -selection c"
+alias getclip="xclip -selection c -o"
 
 LS_COLORS='di=93:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35:*.rpm=90'
 export LS_COLORS

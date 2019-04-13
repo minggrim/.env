@@ -57,6 +57,7 @@ then
     sudo apt-get install -y -q libqscintilla2-dev
     sudo apt-get install -y -q inotify-tools
     sudo apt-get isntall -y -q xclip
+    sudo apt-get install -y -q ipcalc
 else
     echo "other linux distrubution"
 fi

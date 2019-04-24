@@ -58,6 +58,7 @@ then
     sudo apt-get install -y -q inotify-tools
     sudo apt-get isntall -y -q xclip
     sudo apt-get install -y -q ipcalc
+    sudo apt-get install -y -q gnuplot
 else
     echo "other linux distrubution"
 fi

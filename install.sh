@@ -59,6 +59,8 @@ then
     sudo apt-get isntall -y -q xclip
     sudo apt-get install -y -q ipcalc
     sudo apt-get install -y -q gnuplot
+    # https://launchpad.net/ubuntu/trusty/+package/dwarves
+    sudo apt-get install -y -q dwarves
 else
     echo "other linux distrubution"
 fi

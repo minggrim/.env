@@ -61,6 +61,7 @@ then
     sudo apt-get install -y -q gnuplot
     # https://launchpad.net/ubuntu/trusty/+package/dwarves
     sudo apt-get install -y -q dwarves
+    sudo apt-get install -y -q shellcheck
 else
     echo "other linux distrubution"
 fi

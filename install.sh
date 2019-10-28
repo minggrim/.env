@@ -62,6 +62,9 @@ then
     # https://launchpad.net/ubuntu/trusty/+package/dwarves
     sudo apt-get install -y -q dwarves
     sudo apt-get install -y -q shellcheck
+    sudo apt-get install -y -q sysstat
+    sudo sed -i 's/ENABLED="false"/ENABLED="true"/g' /etc/default/sysstat
+    sudo service sysstat restart
 else
     echo "other linux distrubution"
 fi

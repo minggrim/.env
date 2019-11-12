@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# https://lwn.net/Articles/370423/
+
+DEBUGFS=`grep debugfs /proc/mounts | awk '{ print $2; }'`
+
+# disable and clear ftrace buffer
+echo 0 > ${DEBUGFS}/tracing/tracing_on
+echo -1 > ${DEBUGFS}/tracing/set_ftrace_pid
+echo > ${DEBUGFS}/tracing/trace
+
+echo $$ > ${DEBUGFS}/tracing/set_ftrace_pid
+echo 1 > ${DEBUGFS}/tracing/tracing_on
+
+echo function > ${DEBUGFS}/tracing/current_tracer
+exec $*

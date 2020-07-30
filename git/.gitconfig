@@ -17,6 +17,7 @@
     br = branch --sort=committerdate
     re = remote
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+    slg = log --pretty=oneline
     al = config --get-regexp alias
 [push]
 	default = simple
@@ -30,3 +31,13 @@
 	bc = trustExitCode
 [difftool "bc3"]
 	trustExitCode = true
+[color "status"]
+added = green
+    changed = yellow
+    untracked = white
+    deleted = green
+    unmerged = bold yellow
+[color "diff"]
+added = green
+    changed = yellow
+    deleted = green

@@ -6,8 +6,6 @@
 	sslVerify = false
 [core]
 	editor = vim
-[merge]
-	tool = bc
 [alias]
     co = checkout
     cp = cherry-pick
@@ -18,19 +16,24 @@
     re = remote
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
     slg = log --pretty=oneline
+    rl = reflog --date=iso
     al = config --get-regexp alias
 [push]
 	default = simple
+[merge]
+	tool = bc4
+[mergetool]
+    prompt = false
+[mergetool "bc4"]
+	trustExitCode = true
+    cmd = `/usr/bin/bcompare $LOCAL $REMOTE`
 [diff]
 	tool = bcompare
 [difftool]
 	prompt = false
-[merge "tool"]
-	bc = trustExitCode
-[diff "tool"]
-	bc = trustExitCode
-[difftool "bc3"]
+[difftool "bc4"]
 	trustExitCode = true
+    cmd = `/usr/bin/bcompare $LOCAL $REMOTE`
 [color "status"]
 added = green
     changed = yellow

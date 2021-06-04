@@ -1,4 +1,4 @@
-alias ls="ls -GF"
+alias ls="ls --color -GF"
 alias ll="ls -GFalh"
 alias setclip="xclip -selection c"
 alias getclip="xclip -selection c -o"

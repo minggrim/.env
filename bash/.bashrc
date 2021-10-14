@@ -26,3 +26,4 @@ function git_branch {
 }
 
 PS1='\[\e[0;33m\]\u\[\e[0m\]@\h:\[\e[0;34m\]\W\[\e[0m\][$(date +%k:%M)]$(git_branch)\$ '
+source /usr/share/git/completion/git-completion.bash

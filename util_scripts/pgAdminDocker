@@ -1,0 +1,6 @@
+#!/bin/bash
+docker run -e "PGADMIN_LISTEN_PORT=$1" -e "PGADMIN_DEFAULT_EMAIL=$2" -e "PGADMIN_DEFAULT_PASSWORD=$3" --network="host" --rm dpage/pgadmin4:latest
+
+if [[ "$?" -ne 0 ]];then
+    echo "Usage:" `basename $0` "<port> <email> <password>"
+fi

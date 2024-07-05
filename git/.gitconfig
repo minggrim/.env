@@ -18,6 +18,11 @@
     slg = log --pretty=oneline
     rl = reflog --date=iso
     al = config --get-regexp alias
+    smS = submodule sync --recursive
+    sms = submodule foreach --quiet 'echo \"\" $(git rev-list -n1 HEAD) $sm_path $(git describe --all | sed -e s,^tags/,\\(, -e s/$/\\)/)'
+    smu = submodule update --init --recursive
+    enablecredcache = config --global credential.helper cache
+    disablecredcache = config --global --unset credential.helper
 [push]
 	default = simple
 [merge]

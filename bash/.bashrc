@@ -4,6 +4,8 @@ alias setclip="xclip -selection c"
 alias getclip="xclip -selection c -o"
 alias bc3=/usr/bin/bcompare
 
+source /usr/share/bash-completion/completions/git
+
 LS_COLORS='di=93:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35:*.rpm=90'
 export LS_COLORS
 PATH=~/bin:~/util_scripts:$PATH
@@ -26,4 +28,3 @@ function git_branch {
 }
 
 PS1='\[\e[0;33m\]\u\[\e[0m\]@\h:\[\e[0;34m\]\W\[\e[0m\][$(date +%k:%M)]$(git_branch)\$ '
-source /usr/share/git/completion/git-completion.bash
